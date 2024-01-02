@@ -21,6 +21,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 h1,h2,h3,p,ul {
@@ -45,4 +46,104 @@ button {
 
 button:focus {
     outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+    background-color: rgb(0, 10, 10);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 
+.header__logo img {
+}
+- 이렇게 css 선택자를 쓰면 성능에 좋지 않다.
+- header__logo 클래스 아래의 img 태그를 선택하는게 아니라, 실제로는 
+img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한다.
+-> 명시적으로 class를 선택해주는게 성능에 좋다.
+*/
+.header__logo__img {
+    width: 36px;
+    height: 36px;
+}
+
+.header__logo__title {
+    /* rem : 브라우저의 기본 폰트 사이즈의 배수 크기로 지정. 1.8배 */
+    font-size: 1.8rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 4px;
+}
+
+.header__menu__item {
+    padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+}
+
+/* Home */
+#home {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 5rem 1rem;
+    padding-top: 7rem;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid var(--color-accent);
+}
+
+.home__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home__title--strong {
+    color: var(--color-accent);
+}
+
+.home__description {
+    font-size: 1.3rem;
+}
+
+.home__contact {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.home__contact:hover {
+    background-color: transparent;
+    color: var(--color-text);
+    outline: 2px solid var(--color-accent);
 }
