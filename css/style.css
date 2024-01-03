@@ -177,9 +177,9 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
 
 /* About */
 .majors {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    display: flex; /* 수평정렬 */
+    justify-content: space-between; /* 좌우 간격 벌리기 */
+    gap: 1rem; /* 좌우 간격 조절 */
     margin: 2.5rem 0;
 }
 
@@ -193,10 +193,14 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
 }
 
 .major__icon {
-    font-size: 4rem;
+    font-size: 4rem; /* 이미지 크기도 font size로 키울수 있구나 */
     margin: 1rem 0;
     color: var(--color-accent);
-    transition: all 300ms ease;
+    /* transition : 애니메이션 효과 주기
+       all : 모든 애니메이션, 300ms : 지속시간, 효과
+       transition: property name | duration | timing function | delay
+    */
+    transition: all 300ms ease; 
 }
 
 .major__title {
@@ -210,7 +214,7 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
 }
 
 .jobs {
-    text-align: start;
+    text-align: start; /* 왼쪽 정렬 */
 }
 
 .job {
