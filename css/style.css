@@ -83,6 +83,7 @@ button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1; /* 헤더가 가장 위로 올라오도록 */
 }
 
 .header__logo {
@@ -294,4 +295,53 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
 .bar__value {
     height: 3px;
     background-color: var(--color-accent);
+}
+
+/* Work */
+#work {
+    background-color: var(--color-primary);
+    color: var(--color-text); /* button은 부모의 color를 상속받지 않는다. */
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem;
+    gap: 1rem;
+}
+
+.category {
+    position: relative; /* count absolute를 주면 body에 붙는걸 방지 */
+    color:var(--color-text);
+    font-size: 1.1rem;
+    padding: 0.5rem 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    cursor: pointer; /* 마우스 올렸을때 손가락 모양 포인터로 변경 */
+    white-space: nowrap; /* 줄바꿈 되지 않게 */
+}
+
+.category--selected {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.category__count {
+    opacity: 0;
+    position: absolute;
+    top: -20px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: var(--color-accent-variant);
+    color: var(--color-text);
+    transition: all 250ms ease-in;
+}
+
+.category--selected .category__count,
+.category:hover .category__count {
+    opacity: 1;
+    top: 0;
 }
