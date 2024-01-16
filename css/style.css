@@ -451,6 +451,7 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
     border-radius: 100%;
     text-align: center;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
+    transition: opacity 300ms ease-in;
 }
 
 /* Footer */
