@@ -367,7 +367,13 @@ img태그 전부를 고른 뒤 header__logo 태그 아래에 있는걸 선택한
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4개 열, 1배율로 배치 */
     grid-template-rows: repeat(2, 1fr);  /* 2개 행, 1배율로 배치 */
-    gap: 1rem;    
+    gap: 1rem;
+    transition: all 250ms ease-out;    
+}
+
+.projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
 }
 
 .project {
